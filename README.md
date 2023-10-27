@@ -1,2 +1,2 @@
 # C is fun 🤖
-![](https://raw.githubusercontent.com/gist/siddharth151199/14682974567534e7d396f6e7fa596696/raw/50cc1628f8918648b01d095dc027b9f81f0cba48/giphy.gif)
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--dWwH4rJ4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://media2.giphy.com/media/fnD9cHHIrYRYk/giphy.gif)
