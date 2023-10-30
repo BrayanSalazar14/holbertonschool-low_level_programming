@@ -12,18 +12,20 @@
  */
 int main(void)
 {
-	char letters;
+	char letters; /* Se declara variable para representar una letra */
 
+	/* Imprime letras minúsculas de 'a' a 'z' */
 	for (letters = 'a'; letters <= 'z' ; letters++)
 	{
 		putchar(letters);
 	}
 
+	/* Imprime letras mayusculas de 'A' a 'Z' */
 	for (letters = 'A'; letters <= 'Z' ; letters++)
 	{
 		putchar(letters);
 	}
 
-	putchar('\n');
+	putchar('\n'); /* Salto de linea */
 	return (0);
 }
