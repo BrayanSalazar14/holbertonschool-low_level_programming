@@ -6,7 +6,7 @@
 #include<stdio.h>
 
 /**
- * main - Program that prints the alphabet
+ * main - Program that prints the alphabet and the letter q excludes me
  *
  * Return: Always 0
  */
@@ -18,7 +18,7 @@ int main(void)
 	for (letters = 'a'; letters <= 'z' ; letters++)
 	{
 		/* Conditional which excludes the letters q and e */
-		if(letters != 'q' && letters != 'e')
+		if (letters != 'q' && letters != 'e')
 		{
 			putchar(letters);
 		}
