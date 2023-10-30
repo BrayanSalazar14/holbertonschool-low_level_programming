@@ -6,7 +6,7 @@
 #include<stdio.h>
 
 /**
- * main - Program that prints the alphabet and the letter q excludes me
+ * main - Program that prints the alphabet and the letter 'q' excludes 'e'
  *
  * Return: Always 0
  */
