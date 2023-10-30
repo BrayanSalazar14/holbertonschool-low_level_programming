@@ -6,7 +6,7 @@
 #include<stdio.h>
 
 /**
- * main - Program that prints the alphabet in min and mayus
+ * main - Program that prints the alphabet
  *
  * Return: Always 0
  */
@@ -17,13 +17,11 @@ int main(void)
 	/* Prints lowercase letters from 'a' to 'z' */
 	for (letters = 'a'; letters <= 'z' ; letters++)
 	{
-		putchar(letters);
-	}
-
-	/* Prints uppercase letters from 'A' to 'Z' */
-	for (letters = 'A'; letters <= 'Z' ; letters++)
-	{
-		putchar(letters);
+		/* Conditional which excludes the letters q and e */
+		if(letters != 'q' && letters != 'e')
+		{
+			putchar(letters);
+		}
 	}
 
 	putchar('\n'); /* Line break */
