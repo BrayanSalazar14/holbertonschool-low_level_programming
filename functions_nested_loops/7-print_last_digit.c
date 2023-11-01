@@ -1,27 +1,18 @@
-/*
- *File: 7-print_last_digit.c
- *Author: Brayan Steven Salazar
- */
-
 #include "main.h"
-/**
- *print_last_digit - Function that prints the last digit of a number
- *@n: Declare integer variable
- *Return: n Always
- */
+
 int print_last_digit(int n)
 {
+	int lstd;
+
 	if (n < 0)
 	{
-		n = (n * -1) % 10;
-		_putchar(n + '0');
-		return (n);
+		lstd = (n * -1) % 10;
+		_putchar(lstd + '0');
 	}
-	else
+	else if (n > 0 || n == 0)
 	{
-		n = n % 10;
-		_putchar(n + '0');
-		return (n);
+		lstd = n % 10;
+		_putchar(lstd + '0');
 	}
-
+	return (lstd);
 }
