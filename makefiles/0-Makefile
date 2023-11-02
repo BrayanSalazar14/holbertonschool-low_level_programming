@@ -1,5 +1,5 @@
 EXECUTABLE: school
 
-run:
-	@gcc -Wall -pedantic -Werror -Wextra -std=gnu89 -o $(EXECUTABLE)
+all: main.c school.c
+	@gcc -Wall -pedantic -Werror -Wextra -std=gnu89 $(all) -o $(EXECUTABLE)
 
