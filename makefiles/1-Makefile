@@ -1,0 +1,6 @@
+SRC:= *.c
+CC:= cc
+
+all:
+	$(CC) $(SRC) -o school
+
