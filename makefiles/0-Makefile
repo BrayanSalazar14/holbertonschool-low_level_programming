@@ -1,5 +1,2 @@
-EXECUTABLE: school
-
-all: main.c school.c
-	@gcc -Wall -pedantic -Werror -Wextra -std=gnu89 $(all) -o $(EXECUTABLE)
-
+all: *.c
+	cc *.c -o school
