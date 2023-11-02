@@ -9,13 +9,14 @@
  *
  *Return: void
  */
-void times_table(void) {
-  
+void times_table(void)
+{
+
 	int n1, n2, mult;
-  
+
 	for (n1 = 0; n1 <= 9; n1++)
 	{
-		for (n2 = 0; n2 <=9; n2++)
+		for (n2 = 0; n2 <= 9; n2++)
 		{
 
 			mult = n1 * n2;
@@ -34,12 +35,12 @@ void times_table(void) {
 				_putchar(',');
 				_putchar(' ');
 			}
-			if ((n2++) * n1 <= 9)
+			if ((n2 + 1) * n1 <= 9)
 			{
 				_putchar(' ');
 			}
 		}
 		_putchar('\n');
 	}
-	
+
 }
