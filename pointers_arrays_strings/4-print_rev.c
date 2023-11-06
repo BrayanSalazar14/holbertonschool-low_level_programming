@@ -20,7 +20,7 @@ void print_rev(char *s)
 
 	large = i;
 
-	for  (j = large - 1; j >= 0; i--)
+	for  (j = large - 1; j >= 0; j--)
 	{
 		_putchar(s[j]);
 	}
