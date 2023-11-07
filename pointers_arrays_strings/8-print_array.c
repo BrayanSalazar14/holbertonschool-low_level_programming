@@ -3,6 +3,7 @@
  *Author: Brayan Steven Salazar
  */
 
+#include <stdio.h>
 #include "main.h"
 
 /**
