@@ -12,9 +12,9 @@
  */
 int _atoi(char *s)
 {
-	int n = 0;
 	int x = 1;
 	int i = 0;
+	unsigned int n = 0;
 
 	for (; s[i] != '\0'; i++)
 	{
