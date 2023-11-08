@@ -1,5 +1,5 @@
 /*
- *File: 0-strcat.c
+ *File: 0 - Pointers
  *Author: Brayan Steven Salazar
  */
 #include "main.h"
