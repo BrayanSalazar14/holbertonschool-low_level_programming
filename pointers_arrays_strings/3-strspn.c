@@ -12,10 +12,10 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int = 0;
+	int i = 0;
 	unsigned int length = 0;
 
-	for (; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		int j = 0, coinc_char = 0;
 
