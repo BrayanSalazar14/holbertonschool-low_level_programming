@@ -18,17 +18,12 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			break;
+			return (&s[i]);
 		}
 	}
 
-	if (s[i] == c || s[i] == '\0')
-		/* Verifica si el caracter en la posición actual es igual a C */
-		/* O si el caracter en posición actual es el cartacter nulo */
+	if (s[i] == '\0')
 	{
-		/* Devuelve un puntero a la posición actual en la cadena s */
-		/* Devuelve un puntero a la posición donde se encontró el caracter */
-		return (&s[i]);
+		return (NULL);
 	}
-	return (NULL);
 }
