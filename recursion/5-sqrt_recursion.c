@@ -12,10 +12,10 @@
  */
 int square(int x, int y)
 {
-	if (y * y > a)
+	if (y * y > x)
 		return (-1);
 
-	if (y * y == a)
+	if (y * y == x)
 	{
 		return (y);
 	}
