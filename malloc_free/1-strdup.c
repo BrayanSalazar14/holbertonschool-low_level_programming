@@ -8,7 +8,8 @@
 #include <stdbool.h>
 
 /**
- *_strdup - unction that returns a pointer to a newly allocated space in memory, 
+ *_strdup - Function that returns a pointer to a newly
+ *allocated space in memory
  *which contains a copy of the string given as a parameter.
  *str: String to duplicate
  *Return: Duplicate string or null if it has no reserved space in memory
