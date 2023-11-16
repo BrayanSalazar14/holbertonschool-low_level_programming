@@ -11,7 +11,7 @@
  *_strdup - Function that returns a pointer to a newly
  *allocated space in memory
  *which contains a copy of the string given as a parameter.
- *str: String to duplicate
+ *@str: String to duplicate
  *Return: Duplicate string or null if it has no reserved space in memory
  */
 char *_strdup(char *str)
