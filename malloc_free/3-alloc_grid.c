@@ -1,7 +1,18 @@
+/*
+ *Author: Brayan Steven Salazar
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ *alloc_grid - Function that returns a pointer to a 2 dimensional 
+ *array of integers.
+ *@width: variable for the width of my array
+ *@height: variable for the height of my matrix
+ *Return: Two-dimensional array assigned and initialized to 0
+ */
 int **alloc_grid(int width, int height)
 {
 	int **matriz;
