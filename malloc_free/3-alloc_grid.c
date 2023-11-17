@@ -21,10 +21,10 @@ int **alloc_grid(int width, int height)
 
 		if (matriz[i] == NULL)
 		{
-			for (j = 0; j < i, j ++)
+			for (j = 0; j < i; j ++)
 				free(matriz[j]);
 		}
-		free(matriz):
+		free(matriz);
 			return (NULL);
 
 		for (j = 0; j < width; j++)
