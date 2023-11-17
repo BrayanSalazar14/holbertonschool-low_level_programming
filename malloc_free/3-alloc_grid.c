@@ -7,7 +7,7 @@
 #include <string.h>
 
 /**
- *alloc_grid - Function that returns a pointer to a 2 dimensional 
+ *alloc_grid - Function that returns a pointer to a 2 dimensional
  *array of integers.
  *@width: variable for the width of my array
  *@height: variable for the height of my matrix
@@ -46,5 +46,5 @@ int **alloc_grid(int width, int height)
 			matriz[i][j] = 0;
 		}
 	}
-	return(matriz);
+	return (matriz);
 }
