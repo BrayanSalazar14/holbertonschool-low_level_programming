@@ -3,6 +3,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	unsigned int i;
   void *asignMemory;
   
   if (nmemb == 0 || size == 0)
@@ -15,5 +16,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
     return NULL;
     }    
 
+  num_size_elements = (nmemb * size);
+
+for (i = 0; i < num_size_elements)
+	*((char *)asignMemory + i) = 0;
+
   return asignMemory;
-  }
+}
