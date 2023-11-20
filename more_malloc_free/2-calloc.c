@@ -6,9 +6,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
   void *asignMemory;
   
   if (nmemb == 0 || size == 0)
-  {
-    return NULL;
-    }
+	  return NULL;
   
   asignMemory = malloc(nmemb * size);
   
@@ -16,4 +14,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
   {
     return NULL;
     }    
+
+  return asignMemory;
   }
