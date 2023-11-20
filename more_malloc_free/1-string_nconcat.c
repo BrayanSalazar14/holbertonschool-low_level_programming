@@ -3,6 +3,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  *string_nconcat - Concatenates two strings.
@@ -25,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	size_t s1_length = strlen(s1);
-	size_t   s2_length = strlen(s2);
+	size_t s2_length = strlen(s2);
 
 	if (n >= s2_length)
 		n = s2_length;
