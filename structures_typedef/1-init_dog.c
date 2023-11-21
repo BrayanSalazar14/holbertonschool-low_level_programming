@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stdlib>
+#include <stdio>
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
