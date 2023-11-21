@@ -9,7 +9,7 @@
  *followed by a new line
  *Return: 0 if correct
  */
-int main()
+int main(void)
 {
 	printf("%s\n", __FILE__);
 
