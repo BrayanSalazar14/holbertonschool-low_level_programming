@@ -2,7 +2,7 @@
 #include <stdio.h>
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDod = malloc(sizeof(dog_t))
+	dog_t *newDog = (dog_t *)malloc(sizeof(dog_t))
 
 		if (new_dog == NULL)
 			return NULL;
