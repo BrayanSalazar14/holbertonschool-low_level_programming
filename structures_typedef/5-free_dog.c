@@ -15,9 +15,12 @@
  */
 void free_dog(dog_t *d)
 {
+	if (d != NULL)
+	{
 	free(d->name);
-	/* d->age no se libera por que es un tipo de dato primitivo "int"
-	   no es un puntero o una memoria asignada dinamicamente */
+	/* d->age no se libera por que es un tipo de dato primitivo "int" */
+	/* no es un puntero o una memoria asignada dinamicamente */
 	free(d->owner);
 	free(d);
+	}
 }
