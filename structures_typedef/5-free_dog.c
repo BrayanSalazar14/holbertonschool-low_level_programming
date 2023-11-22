@@ -15,6 +15,10 @@
  */
 void free_dog(dog_t *d)
 {
+	/**
+	 *Si no es NULL es por que si se asigno memoria exitosamente y como
+	 *ya no necesito la memoria, debo limpiarla
+	 */
 	if (d != NULL)
 	{
 	free(d->name);
