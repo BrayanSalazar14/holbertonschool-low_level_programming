@@ -14,7 +14,7 @@
  *Return:
  *Returns the index of the first element satisfying the search condition.
  *If the array is NULL, the size is not positive, or the comparison function
- *is NULL, returns -1 to indicate an error or that no satisfying 
+ *is NULL, returns -1 to indicate an error or that no satisfying
  *element was found.
  */
 int int_index(int *array, int size, int (*cmp)(int))
