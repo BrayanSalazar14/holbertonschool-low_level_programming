@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 
 	if (op == NULL)
 	{
-		printf("Error\n");
-		exit(99);
+        printf("Error\n");
+        exit(99);
 	}
 
 	printf("%d\n", get_op_func(op)(num1, num2));
