@@ -6,8 +6,9 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
+	int index = 0;
 	char c;
-	int i, index = 0;
+	int i;
 	float f;
 	char *s;
 
