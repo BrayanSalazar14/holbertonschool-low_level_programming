@@ -6,9 +6,8 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	int index = 0;
 	char c;
-	int i;
+	int i, index = 0;
 	float f;
 	char *s;
 
@@ -43,4 +42,5 @@ void print_all(const char * const format, ...)
 					|| format[index] == 's'))
 			printf(", ");
 	}
+	va_end(args);
 }
