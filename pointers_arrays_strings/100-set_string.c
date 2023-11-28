@@ -16,8 +16,12 @@ void set_string(char **s, char *to)
 {
 	size_t string;
 
-	if (s == NULL || to == NULL)
+	if (*s == NULL)
+		return;
+
+	if (to == NULL)
 	{
+		*s = NULL;
 		return;
 	}
 
