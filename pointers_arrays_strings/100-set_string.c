@@ -13,8 +13,21 @@
  */
 void set_string(char **s, char *to)
 {
-	if (*s != NULL)
-		*s = to;
-	else
-		*s = to;
+	size_t string;
+
+	if (s == NULL || to == NULL)
+	{
+		return;
+	}
+
+	string = strlen(to);
+
+	*s = malloc(string + 1);
+
+	if (*s == NULL)
+	{
+		return;
+	}
+
+	strcpy(*s, to);
 }
