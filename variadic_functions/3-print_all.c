@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while (format[index] != '\0')
+	while (format && format[index])
 	{
 		switch (format[index])
 		{
@@ -35,11 +35,11 @@ void print_all(const char * const format, ...)
 				index++;
 				continue;
 		}
-		index++;
 
 		if (format[index + 1])
 			printf(", ");
 
+		index++;
 	}
 	va_end(args);
 	printf("\n");
