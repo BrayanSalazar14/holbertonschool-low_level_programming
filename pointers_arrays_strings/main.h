@@ -2,6 +2,9 @@
 #define MAIN_H
 
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 int _putchar(char c);
 void swap_int(int *a, int *b);
 void reset_to_98(int *n);
@@ -33,6 +36,6 @@ char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 
-void set_string(char **s, const char *to);
+void set_string(char **s, char *to);
 
 #endif
