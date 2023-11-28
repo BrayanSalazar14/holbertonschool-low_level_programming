@@ -29,10 +29,8 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(args, char*);
-				if (s != NULL)
-					printf("%s", s);
-				else
-					printf("(nil)");
+				s = (s != NULL) ? s : "(nil)";
+				printf("%s", s);
 				break;
 		}
 		index++;
