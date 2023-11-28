@@ -14,7 +14,6 @@
  */
 void set_string(char **s, char *to)
 {
-	size_t string;
 
 	if (*s == NULL)
 		return;
@@ -25,14 +24,5 @@ void set_string(char **s, char *to)
 		return;
 	}
 
-	string = strlen(to);
-
-	*s = malloc(string + 1);
-
-	if (*s == NULL)
-	{
-		return;
-	}
-
-	strcpy(*s, to);
+	*s = to;
 }
