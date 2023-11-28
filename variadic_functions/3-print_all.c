@@ -1,5 +1,14 @@
+/*
+ *Author: Brayan Steven Salazar
+ */
+
 #include "variadic_functions.h"
 
+/**
+ * print_all - Prints a formatted list of variables.
+ * @format: Format string specifying types of variables to print.
+ * @...: Variables to print (variable args).
+ */
 void print_all(const char * const format, ...)
 {
 	char c;
@@ -38,7 +47,6 @@ void print_all(const char * const format, ...)
 
 		if (format[index + 1])
 			printf(", ");
-
 		index++;
 	}
 	va_end(args);
