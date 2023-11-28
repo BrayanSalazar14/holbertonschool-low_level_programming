@@ -29,16 +29,17 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(args, char*);
-				s = (s != NULL) ? s : "(nil)";
-				printf("%s", s);
+				printf("%s", s ? s : "(nil)");
 				break;
+			default:
+				index++;
+				continue;
 		}
 		index++;
-		if (format[index] != '\0' && (format[index] == 'c'
-					|| format[index] == 'i'
-					|| format[index] == 'f'
-					|| format[index] == 's'))
+
+		if (format[index + 1])
 			printf(", ");
+
 	}
 	va_end(args);
 	printf("\n");
