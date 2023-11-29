@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while (format && format[index])
+	while (format[index] != '\0')
 	{
 		switch (format[index])
 		{
