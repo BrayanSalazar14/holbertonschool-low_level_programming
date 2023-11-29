@@ -20,9 +20,9 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while (format[index] != '\0')
+	while (format && format[index] != '\0')
 	{
-		switch (format && format[index])
+		switch (format[index])
 		{
 			case 'c':
 				c = va_arg(args, int);
