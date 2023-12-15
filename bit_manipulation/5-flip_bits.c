@@ -5,21 +5,19 @@
 #include "main.h"
 
 /**
- * clear_bit - Clears the value of a bit to 0 at a given index.
- * @n: Pointer to the unsigned long int where the bit will be cleared.
- * @index: Index of the bit to be cleared, starting from 0.
+ * flip_bits - Returns the number of bits needed to flip to
+ *	transform one number into another.
+ * @n: First unsigned long int number.
+ * @m: Second unsigned long int number.
  *
- * This function clears the bit at the specified index in the
- * unsigned long int pointed to by n.
- *
- * Return: 1 if it worked, or -1 if an error occurred (index out of range).
+ * Return: The number of bits needed to flip.
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int count;
-	unsigned int comparator;
-	comparator = n ^ m;
+	unsigned long int comparator;
 
+	comparator = n ^ m;
 	count = 0;
 	while (comparator > 0)
 	{
