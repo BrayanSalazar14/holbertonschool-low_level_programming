@@ -4,6 +4,9 @@
 
 #include "main.h"
 
+char *create_buffer(char *file);
+void close_file(int fd);
+
 /**
  * main - Entry point for the cp (copy) program.
  * @argc: Number of command-line arguments.
