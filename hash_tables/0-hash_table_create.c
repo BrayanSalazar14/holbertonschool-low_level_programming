@@ -1,4 +1,4 @@
-#include "hash_table.c"
+#include "hash_tables.h"
 
 /**
  * hash_table_create - Creates a hash table.
@@ -11,6 +11,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_node_t **h_node;
 	hash_table_t *h_table;
+
+	if (size == 0)
+		return (NULL);
 
 	h_node = malloc(size * sizeof(hash_node_t));
 
