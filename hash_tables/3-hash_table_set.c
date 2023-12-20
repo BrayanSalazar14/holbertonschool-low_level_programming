@@ -46,11 +46,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node == NULL)
 		return (0);
 
-	tmp = ht->array[index];
 
-	if (tmp == NULL)
+	if (ht->array[index] == NULL)
+	{
 		ht->array[index] = new_node;
-
+		return (1);
+	}
 	else
 	{
 		while (tmp->next != NULL)
