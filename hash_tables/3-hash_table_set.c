@@ -1,5 +1,12 @@
 #include "hash_tables.h"
 
+/**
+ * hash_newNode - Creates a new hash node.
+ * @key: Key string for the new node.
+ * @value: Value string for the new node.
+ *
+ * Return: A pointer to the new hash node, or NULL on failure.
+ */
 hash_node_t *hash_newNode(const char *key, const char *value)
 {
 	hash_node_t *newNode;
@@ -31,11 +38,19 @@ hash_node_t *hash_newNode(const char *key, const char *value)
 
 }
 
+/**
+ * hash_table_set - Adds a key-value pair to a hash table.
+ * @ht: Pointer to the hash table.
+ * @key: Key string to be added.
+ * @value: Value string associated with the key.
+ *
+ * Return: 1 on success, 0 on failure.
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *new_node;
-	
+
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
@@ -52,10 +67,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		return (1);
 	}
-	else 
+	else
 	{
 		new_node->next = ht->array[index];
 		ht->array[index] = new_node;
 	}
-	return (1); 
+	return (1);
 }
