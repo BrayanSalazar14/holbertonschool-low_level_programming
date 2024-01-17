@@ -3,7 +3,7 @@
 
 void eliminar(int array[], int *cant, int position);
 void mostrarArray(int array[], int cant);
-void insertarVector(int array[], int *cantidad);
+void insertarVector(int array[], int cantidad);
 
 int main()
 {
@@ -23,7 +23,7 @@ int main()
 				printf("\nIngrese el numero de elementos del vector:\n");
 				scanf("%d", &cantidad);
 				printf("\n");
-				insertarVector(array, &cantidad);
+				insertarVector(array, cantidad);
 				break;
 			case 2:
 				mostrarArray(array, cantidad);
@@ -63,11 +63,11 @@ void eliminar(int array[], int *cant, int position)
 	*cant = *cant - 1;
 }
 
-void insertarVector(int array[], int *cantidad)
+void insertarVector(int array[], int cantidad)
 {
 	int i = 0;
 
-	for (i = 0; i < *cantidad; i++)
+	for (i = 0; i < cantidad; i++)
 	{
 		printf("Digite el elemento [%d]:\n", i);
 		scanf("%d", &array[i]);
