@@ -5,6 +5,7 @@ void eliminar(int array[], int *cant, int position);
 void mostrarArray(int array[], int cant);
 void insertarVector(int array[], int cantidad);
 void insertarElemento(int array[], int *cant, int pos);
+void ordenarVector(int array[], int cant);
 
 int main()
 {
@@ -14,7 +15,7 @@ int main()
 	while(1)
 	{
 		printf("\nIngrese una de las siguientes opciones:\n");
-		printf("[1]Ingresar vector\n[2]Mostrar vector\n[3]Eliminar elemento\n[4]Insertar elemento\n[5]Salir\n");
+		printf("[1]Ingresar vector\n[2]Mostrar vector\n[3]Eliminar elemento\n[4]Insertar elemento\n[5]Ordenar vector\n[6]Salir\n");
 		printf("\n");
 		scanf("%d", &opcion);
 
@@ -65,6 +66,17 @@ int main()
 					break;
 				}
 			case 5:
+				if (cantidad == 0)
+				{
+					printf("\nEl vector no tiene elementos\n");
+					break;
+				}
+				else
+				{
+					ordenarVector(array, cantidad);
+					break;
+				}
+			case 6:
 				printf("Hasta la proxima\n");
 				exit(0);
 			default:
@@ -116,4 +128,45 @@ void insertarElemento(int array[], int *cant, int pos)
 
 	array[pos] = elem;
 	*cant = *cant + 1;
+}
+
+void ordenarVector(int array[], int cant)
+{
+	int decision;
+	int i, j, aux;
+
+	printf("\n[1]Menor a mayor\n[2]Mayor a menor\n");
+	scanf("%d", &decision);
+
+	if (decision == 1)
+	{
+		for (i = 0; i < cant - 1; i++)
+		{
+			for (j = i + 1; j < cant; j++)
+			{
+				if (array[j] < array[i])
+				{
+					aux = array[i];
+					array[i] = array[j];
+					array[j] = aux;
+				}
+			}
+		}
+	}
+	
+	if(decision == 2)
+	{
+		for (i = 0; i<cant - 1; i++)
+		{
+			for (j = i + 1; j<cant; j++)
+			{
+				if (array[i] < array[j])
+				{
+					aux = array[i];
+					array[i] = array[j];
+					array[j] = aux;
+				}
+			}
+		}
+	}
 }
