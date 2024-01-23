@@ -6,6 +6,7 @@ void mostrarArray(int array[], int cant);
 void insertarVector(int array[], int cantidad);
 void insertarElemento(int array[], int *cant, int pos);
 void ordenarVector(int array[], int cant);
+int buscarElem(int array[], int cant);
 
 int main()
 {
@@ -15,7 +16,7 @@ int main()
 	while(1)
 	{
 		printf("\nIngrese una de las siguientes opciones:\n");
-		printf("[1]Ingresar vector\n[2]Mostrar vector\n[3]Eliminar elemento\n[4]Insertar elemento\n[5]Ordenar vector\n[6]Salir\n");
+		printf("[1]Ingresar vector\n[2]Mostrar vector\n[3]Eliminar elemento\n[4]Insertar elemento\n[5]Ordenar vector\n[6]Buscar elemento vector\n[7]Salir\n");
 		printf("\n");
 		scanf("%d", &opcion);
 
@@ -77,6 +78,19 @@ int main()
 					break;
 				}
 			case 6:
+				if (cantidad == 0)
+				{
+					printf("\nEl vector no tiene elementos\n");
+					break;
+				}
+				else
+				{
+					int elem;
+					elem = buscarElem(array, cantidad);
+					printf("[%d]\n", elem);
+					break;
+				}
+			case 7:
 				printf("Hasta la proxima\n");
 				exit(0);
 			default:
@@ -99,7 +113,7 @@ void mostrarArray(int array[], int cant)
 void eliminar(int array[], int *cant, int position)
 {
 	int i = 0;
-	for (i = position; i < *cant -1; i++)
+	for (i = position; i < *cant - 1; i++)
 		array[i] = array[i + 1];
 
 	*cant = *cant - 1;
@@ -169,4 +183,19 @@ void ordenarVector(int array[], int cant)
 			}
 		}
 	}
+}
+
+int buscarElem(int array[], int cant)
+{
+	int i = 0, elem;
+	printf("Digite el elemento a buscar:\n");
+	scanf("%d", &elem);
+
+	while(i<cant && elem != array[i])
+		i++;
+
+	if (i<cant)
+		return (i);
+	else
+		return (-1);
 }
