@@ -10,8 +10,7 @@
  *
  * @num: The number to print
  */
-void print_number(int num)
-{
+void print_number(int num) {
 	if (num < 10)
 		_putchar(num + '0');
 	else
@@ -32,7 +31,7 @@ void print_number(int num)
 void print_times_table(int n)
 {
 	int i, j, mul;
-
+	
 	if (n > 15 || n < 0)
 		return;
 
@@ -41,31 +40,47 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			mul = i * j;
-			if (mul > 99)
+			if (mul <= 9)
+			{
+				print_number(mul);
+				if (j != n)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+			}
+			if (mul >= 100)
 			{
 				print_number(mul / 10);
 				print_number(mul % 10);
+				if (j != n)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
-			else if (mul > 9)
+			else if (mul >= 10)
 			{
-				_putchar(' ');
 				print_number(mul);
+				if (j != n && i * (j + 1) < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					if (j != n)
+					{
+						_putchar(',');
+						_putchar(' ');
+					}
+				}
 			}
-			else if (j != 0)
-			{
+			if (i * (j + 1) < 10 && j != n)
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(mul + '0');
-			}
-			else
-				_putchar(j + '0');
-
-			if (j != n)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 		}
-		putchar('\n');
-	}
+		_putchar('\n');
+		}
 }
