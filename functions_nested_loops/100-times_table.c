@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
+/**
+ * print_number - Prints a number to stdout
+ *
+ * This function prints a number to stdout. If the number is a single digit,
+ * it prints the digit. If the number is two digits, it prints both digits.
+ *
+ * @num: The number to print
+ */
 void print_number(int num)
 {
 	if (num < 10)
@@ -12,9 +21,18 @@ void print_number(int num)
 	}
 }
 
+/**
+ * print_times_table - Prints the multiplication table for a given number
+ *
+ * This function prints the multiplication table for a given number 'n' up to
+ * 'n' times 'n'.
+ *
+ * @n: The number for which to print the multiplication table
+ */
 void print_times_table(int n)
 {
 	int i, j, mul;
+
 	if (n > 15 || n < 0)
 		return;
 
@@ -23,47 +41,31 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			mul = i * j;
-			if (mul <= 9)
-			{
-				print_number(mul);
-				if (j != n)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-			}
-			if (mul >= 100)
+			if (mul > 99)
 			{
 				print_number(mul / 10);
 				print_number(mul % 10);
-				if (j != n)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
 			}
-			else if (mul >= 10)
+			else if (mul > 9)
 			{
-				print_number(mul);
-				if (j != n && i * (j + 1) < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-				{
-					if (j != n)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
-				}
-			}
-			if (i * (j + 1) < 10 && j != n)
 				_putchar(' ');
+				print_number(mul);
+			}
+			else if (j != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(mul + '0');
+			}
+			else
+				_putchar(j + '0');
+
+			if (j != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }
