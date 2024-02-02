@@ -10,10 +10,10 @@ int main() {
     printf("%lu, %lu, ", a, b);
 
   
-    for (i = 3; cant <= 96; i++) {
+    for (i = 3; cant <= 97; i++) {
         next = a + b;
         printf("%lu", next);
-        if (i < 96) {
+        if (i < 97) {
             printf(", ");
         }
         a = b;
