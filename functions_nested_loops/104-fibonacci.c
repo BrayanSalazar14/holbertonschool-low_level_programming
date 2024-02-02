@@ -4,7 +4,7 @@ int main() {
     long int a = 1; 
     long int b = 2; 
     long int next;  
-    long int i, cant = 2;
+    long int i, cant = 3;
 
     
     printf("%lu, %lu, ", a, b);
