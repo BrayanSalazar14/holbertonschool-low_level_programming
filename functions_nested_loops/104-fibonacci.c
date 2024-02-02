@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    long int a = 1; 
-    long int b = 2; 
-    long int next;  
-    long int i, cant = 2;
+    unsigned long int a = 1; 
+    unsigned long int b = 2; 
+    unsigned long int next;  
+    unsigned long int i, cant = 2;
 
     
     printf("%lu, %lu, ", a, b);
