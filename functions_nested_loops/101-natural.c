@@ -18,6 +18,6 @@ int main(void)
 		if (i % 3 == 0 || i % 5 == 0)
 			suma += i;
 	}
-	printf("La suma es: [%d]\n", suma);
+	printf("%d\n", suma);
 	return (0);
 }
