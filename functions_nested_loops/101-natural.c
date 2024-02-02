@@ -19,4 +19,5 @@ int main(void)
 			suma += i;
 	}
 	printf("La suma es: [%d]\n", suma);
+	return (0);
 }
