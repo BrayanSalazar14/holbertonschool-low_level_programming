@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  unsigned long int a = 1, b = 2;
+  unsigned long int a = 1, b = 2, temp;
   int count = 0;
   while (count < 98) {
       if (count == 97) {
@@ -9,7 +9,7 @@ int main() {
       } else {
           printf("%lu, ", a);
       }
-      int temp = a;
+      temp = a;
       a = b;
       b = temp + b;
       count++;
