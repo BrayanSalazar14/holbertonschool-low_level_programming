@@ -13,7 +13,7 @@ int main() {
     for (i = 3; cant <= 97; i++) {
         next = a + b;
         printf("%lu", next);
-        if (i < 97) {
+        if (cant < 97) {
             printf(", ");
         }
         a = b;
