@@ -26,11 +26,11 @@ int main(void)
 
 		if (next % 2 == 0)
 			sum += next;
-		
+
 		a = b;
 		b = next;
 	}
-	printf("%lu ", sum);
+	printf("%lu", sum);
 	printf("\n");
 	return (0);
 }
